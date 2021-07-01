@@ -1,6 +1,6 @@
 #!/data/data/hilled.pwnterm/files/usr/bin/bash
 
-# Remove  Old Folder if exist 
+#<<<------Remove  Old Folder if exist------>>> 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
 
@@ -9,10 +9,10 @@ msfvar=6.0.33
 msfpath='/data/data/hilled.pwnterm/files/usr/home'
 
 apt update && apt upgrade
-# Temporary 
+#<<<------Temporary------>>> 
 apt remove ruby -y
 apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make ruby2 libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
-# Many phones are claiming libxml2 not found error
+#<<<------Many phones are claiming (libxml2 not found) error------>>>
 ln -sf /data/data/hilled.pwnterm/files/usr/include/libxml2/libxml /data/data/hilled.pwnterm/files/usr/include/
 
 cd $msfpath
@@ -22,23 +22,23 @@ tar -xf $msfpath/$msfvar.tar.gz
 mv $msfpath/metasploit-framework-$msfvar $msfpath/metasploit-framework
 cd $msfpath/metasploit-framework
 
-# Update rubygems-update
+#<<<------Update rubygems-update------>>>
 if [ "$(gem list -i rubygems-update 2>/dev/null)" = "false" ]; then
 	gem install --no-document --verbose rubygems-update
 fi
 
-# Update rubygems
+#<<<------Update rubygems------>>>
 update_rubygems
 
-# Install bundler
+#<<<------Install bundler------>>>
 gem install --no-document --verbose bundler:1.17.3
 
-# Installing all gems 
+#<<<------Installing all gems------>>> 
 bundle config build.nokogiri --use-system-libraries
 bundle install -j3
 echo "Gems installed"
 
-# Some fixes
+#<<<------Some fixes------>>>
 sed -i "s@/etc/resolv.conf@$PREFIX/etc/resolv.conf@g" $msfpath/metasploit-framework/lib/net/dns/resolver.rb
 find "$msfpath"/metasploit-framework -type f -executable -print0 | xargs -0 -r termux-fix-shebang
 find "/data/data/hilled.pwnterm/files/usr"/lib/ruby/gems -type f -iname \*.so -print0 | xargs -0 -r termux-elf-cleaner
