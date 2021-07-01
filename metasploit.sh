@@ -1,5 +1,18 @@
 #!/data/data/hilled.pwnterm/files/usr/bin/bash
 
+#<<<------Intro------>>>>
+printf "\e[1;97m      __  __     _____     ____        _         ___ _   \e[0m\n"
+printf "\e[1;96m     |  \/  | __|_   _|_ _/ ___| _ __ | |    ___|_ _| |_ \e[0m\n"
+printf "\e[1;36m     | |\/| |/ _ \| |/ _\` \___ \| '_ \| |   / _ \| || __|\e[0m\n"
+printf "\e[1;93m     | |  | |  __/| | (_| |___) | |_) | |__| (_) | || |_ \e[0m\n"
+printf "\e[1;33m     |_|  |_|\___||_|\__,_|____/| .__/|_____\___/___|\__|\e[0m\n"
+printf "\e[1;91m                                |_|\e[1;34m IN PWN-TERM \e[0m\n"
+sleep 1
+echo
+pfetch
+sleep 2
+#<<<------INSTALLTION PROCESS------>>>
+
 #<<<------Remove  Old Folder if exist------>>> 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
