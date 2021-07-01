@@ -46,7 +46,7 @@ find "/data/data/hilled.pwnterm/files/usr"/lib/ruby/gems -type f -iname \*.so -p
 echo "Creating database"
 
 mkdir -p $msfpath/metasploit-framework/config && cd $msfpath/metasploit-framework/config
-curl -LO https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/database.yml
+curl -LO https://raw.githubusercontent.com/jithu1234b/metasploit_for_PWN-TERM/main/database.yml
 
 mkdir -p /data/data/hilled.pwnterm/files/usr/var/lib/postgresql
 pg_ctl -D "$PREFIX"/var/lib/postgresql stop > /dev/null 2>&1 || true
