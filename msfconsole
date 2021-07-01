@@ -12,16 +12,16 @@ fi
 # Fix ruby bigdecimal extensions linking error.
 case "$(uname -m)" in
 	aarch64|armv8l)
-		export LD_PRELOAD="/data/data/hilled.pwn/files/usr/lib/ruby/$RUBYVER/aarch64-linux-android/bigdecimal.so:$LD_PRELOAD"
+		export LD_PRELOAD="/data/data/hilled.pwnterm/files/usr/lib/ruby/$RUBYVER/aarch64-linux-android/bigdecimal.so:$LD_PRELOAD"
 		;;
 	arm*)
-		export LD_PRELOAD="/data/data/hilled.pwn/files/usr/lib/ruby/$RUBYVER/arm-linux-androideabi/bigdecimal.so:$LD_PRELOAD"
+		export LD_PRELOAD="/data/data/hilled.pwnterm/files/usr/lib/ruby/$RUBYVER/arm-linux-androideabi/bigdecimal.so:$LD_PRELOAD"
 		;;
 	i686)
-		export LD_PRELOAD="/data/data/hilled.pwn/files/usr/lib/ruby/$RUBYVER/i686-linux-android/bigdecimal.so:$LD_PRELOAD"
+		export LD_PRELOAD="/data/data/hilled.pwnterm/files/usr/lib/ruby/$RUBYVER/i686-linux-android/bigdecimal.so:$LD_PRELOAD"
 		;;
 	x86_64)
-		export LD_PRELOAD="/data/data/hilled.pwn/files/usr/lib/ruby/$RUBYVER/x86_64-linux-android/bigdecimal.so:$LD_PRELOAD"
+		export LD_PRELOAD="/data/data/hilled.pwnterm/files/usr/lib/ruby/$RUBYVER/x86_64-linux-android/bigdecimal.so:$LD_PRELOAD"
 		;;
 	*)
 		;;
