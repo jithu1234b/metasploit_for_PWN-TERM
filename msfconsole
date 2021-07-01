@@ -1,4 +1,4 @@
-#!/data/data/hilled.pwn/files/usr/bin/sh
+#!/data/data/hilled.pwnterm/files/usr/bin/sh
 SCRIPT_NAME=$(basename "$0")
 METASPLOIT_PATH="${HOME}/metasploit-framework"
 
